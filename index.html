@@ -1,12 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Hello World!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simplified Monopoly</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="game-board">
+        <div id="top-row" class="row">
+            <div class="space" id="space-0" style="background-color: #922b21">Go</div>
+            <div class="space" id="space-1" style="background-color: #2874a6">Indiana</div>
+            <div class="space" id="space-2" style="background-color: #d4ac0d">Idaho</div>
+            <div class="space" id="space-3" style="background-color: #28b463">Arkansas</div>
+        </div>
+        <div id="middle-row" class="row">
+            <div class="space" id="space-9" style="background-color: #8e44ad">New York</div>
+            <div class="middle_space_left" id="space-left">
+                <div id="controls">
+                    <button id="roll-dice" class="dice">Dice Image</button>
+                </div>
+            </div>
+            <div class="middle_space_right" id="space-right">
+                <div id="dice-result" class="dice">Dice Number</div>
+            </div>
+            <div class="space" id="space-4" style="background-color: #95a5a6">Ohio</div>
+        </div>
+        <div id="bottom-row" class="row">
+            <div class="space" id="space-8" style="background-color: #1a5276">California</div>
+            <div class="space" id="space-7" style="background-color: #d35400">Utah</div>
+            <div class="space" id="space-6" style="background-color: #196f3d">Texas</div>
+            <div class="space" id="space-5" style="background-color: #ff33dd">Oregon</div>
+        </div>
+    </div>
 
-<h1>Hello world!</h1>
-<p>This is the first file in my new Git Repo.</p>
+    <div id="player-area">
+        <div id="player1">
+            <h2>Player 1</h2>
+            <p>Money: <span id="player1-money">1500</span></p>
+            <p>Current Position: <span id="player1-position">Go</span></p>
+        </div>
+        <div id="player2">
+            <h2>Player 2</h2>
+            <p>Money: <span id="player2-money">1500</span></p>
+            <p>Current Position: <span id="player2-position">Go</span></p>
+        </div>
+    </div>
 
+    <script src="script.js"></script>
 </body>
 </html>
