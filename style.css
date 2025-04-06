@@ -1,68 +1,32 @@
+/* Fixed width and height for the game board */
 #game-board {
-    display: flex;
-    flex-direction: column;
-    width: 600px; /* Adjust size as needed */
-    height: 600px;
-    margin: 20px auto;
-    border: 1px solid black;
+    width: 120px; /* Adjust width as needed */
+    height: 120px; /* Adjust height as needed */
+    border: 1px solid black; /* Adds a border to visualize the game cells */
+    box-sizing: border-box; /* Ensures padding and border are included in width/height */
+    text-align: center;
+    size: 40%;
+    padding: 10px;
 }
 
-.row, .column {
-    display: flex;
+p {
+    font-size: small;
 }
 
+#middle-board {
+    width: 120px; /* Adjust width as needed */
+    height: 120px; /* Adjust height as needed */
+    box-sizing: border-box; /* Ensures padding and border are included in width/height */
+}
+
+/* Disable wrapping and keep rows fixed */
 .row {
-    flex: 1;
-}
-
-.column {
-    flex-direction: column;
-    flex: 1;
-}
-
-.space {
-    flex: 1;
-    border: 1px solid gray;
-    padding: 10px;
-    text-align: center;
-}
-
-.dice {
-    flex: 1;
-    border: 1px solid gray;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
-    text-align: center;
-}
-
-.middle_space_left {
-    flex: 1;
-    border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
-    border-left: 1px solid gray;
-    padding: 10px;
-    text-align: center;
-}
-
-.middle_space_right {
-    flex: 1;
-    border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
-    border-right: 1px solid gray;
-    padding: 10px;
-    text-align: center;
-}
-
-#player-area {
     display: flex;
-    justify-content: space-around;
-    width: 60%;
-    margin: 20px auto;
+    flex-wrap: nowrap; /* Prevent rows from wrapping */
+    justify-content: center; /* Keep content centered */
 }
 
-#controls {
-    text-align: center;
-    margin-top: 20px;
+/* Make sure the container doesn't resize excessively */
+.container {
+    max-width: 500px; /* Adjust to fit your board size */
 }
